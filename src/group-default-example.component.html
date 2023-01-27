@@ -1,0 +1,18 @@
+<p>
+  You can group by item key providing key name as a string to
+  <b>groupBy</b> input
+</p>
+
+<ng-select
+  [items]="accounts"
+  bindLabel="viewName"
+  groupBy="viewGroup"
+  [(ngModel)]="selectedAccount"
+>
+  <ng-template ng-option-tmp let-item="item">
+    {{ item.viewName }}
+  </ng-template>
+</ng-select>
+
+<br />
+<small>Selected: {{ selectedAccount | json }}</small>
